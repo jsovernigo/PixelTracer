@@ -6,4 +6,7 @@ LINK	=-lSDL
 SDL		=`pkg-config --cflags --libs sdl`
 
 all:
-	$(CC) $(CFLAGS) -o $(EXEC) $(FILES) -I./ $(SDL) $(LINK)
+	$(CC) $(CFLAGS) $(FILES) $(SDL) -o $(EXEC) -I./ $(LINK)
+
+clean:
+	rm $(EXEC)
